@@ -1,0 +1,74 @@
+@import './constants'	
+
+.control
+	margin: 10px 0
+
+	.error
+		font-size: 0.85em
+		color: $primary
+		font-weight: 600
+
+.input, .filled, .textarea
+	outline: none
+	font-size: 1em
+	color: white
+
+
+.textarea, .filled
+	background-color: $dark
+	border: 1px solid darken($dark, 8%)
+	padding: 0 1em
+
+
+.textarea
+	line-height: 1.6em
+	resize: none
+	padding: 0.6em 1em
+	width: 100%
+	box-sizing: border-box
+
+.inputWrapper
+	display: flex
+	align-items: baseline
+	border-bottom: 1px solid darken($dark, 4%)
+	label
+		color: $text
+		width: 9em
+		display: inline-block
+		font-weight: 600
+
+	input
+		outline: none
+		background: none
+		border: none
+		color: white
+		flex: 1 1 auto
+		
+		&::placeholder 
+			color: darken($gray, 10%)
+
+	label, input
+		line-height: 2.3em
+
+	&.errored 
+		position: relative
+
+		.error
+			position: absolute
+			bottom: -1.3em
+
+
+.filled
+	input
+		line-height: 2.9em
+
+.button
+	background: none
+	border: none
+	text-transform: uppercase
+	color: white
+	line-height: 4em
+	align-self: center
+
+
+

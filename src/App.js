@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContextState } from 'context'
+import styles from 'styles/app.module.sass'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/header'
+import Tasks from './components/tasks'
+import NewTaskForm from './components/new-task-form'
+import AuthForm from './components/auth-form'
+
+export default function App (){
+	
+	return (
+		<div className={styles.wrapper}>
+			<div className={styles.container}>
+				<Header/>
+				<AuthForm/>
+				<NewTaskForm/>
+				<Tasks/>
+			</div>
+		</div>
+	)
 }
-
-export default App;
